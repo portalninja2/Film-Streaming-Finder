@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎬 Film Streaming Finder</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="search-container">
+            <div class="search-form">
+                <input type="text" id="searchInput" placeholder="Filmtitel eingeben (z.B. Inception, Avatar, Titanic...)" />
+                <button id="searchBtn" onclick="searchMovies()">🔍 Suchen</button>
+            </div>
+        </div>
+
+        <div id="results"></div>
+
+        <div class="header">
+            <h1>🎬 Film Streaming Finder</h1>
+        </div>
+       
+        <div class="api-note">
+            <strong>Info:</strong> Diese App nutzt die TMDb API für Filmdaten und zeigt nur verfügbare Streaming-Optionen in Deutschland an. Die Daten werden direkt von The Movie Database abgerufen.
+        </div>
+        
+        <div class="movie-sections">
+            <div class="movie-section">
+                <h2>🌟 Empfohlene Filme</h2>
+                <div id="recommendedMovies" class="movie-grid"></div>
+            </div>
+            
+            <div class="movie-section">
+                <h2>🔥 Beliebte Filme</h2>
+                <div id="popularMovies" class="movie-grid"></div>
+            </div>
+            
+            <div class="movie-section">
+                <h2>🆕 Neuerscheinungen</h2>
+                <div id="newMovies" class="movie-grid"></div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
